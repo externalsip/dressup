@@ -1,0 +1,104 @@
+*{box-sizing: border-box;}
+
+body{
+    height: 100vh;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background-color: rgb(105, 84, 131);
+}
+
+#canvas{
+    width:400px;
+    height:400px;
+    background-color: purple;
+    order:2;
+}
+
+#wrapper{
+    height:100vh;
+    width:600px;
+    order:1;
+    display:flex;
+}
+
+#menu{
+    width:100%;
+    height:100%;
+    display:flex;    
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-top:5px;
+
+}
+
+#category_wrapper{
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.category_label{
+    width:75px;
+    height:75px;
+    background-color: rgb(166, 166, 166);
+    display:inline;
+}
+.category_label:hover{
+    background-color: rgb(133, 133, 133);;
+}
+
+.icon{
+    width:100%;
+}
+
+.selection_icon{
+    width:100%;
+    height:100%;
+}
+
+.radio{
+    display:none;
+}
+
+.style_button{
+    background-color: rgb(134, 106, 168);
+    width:250px;
+    height:250px;
+    background-size:contain;
+    text-align: center;
+}
+
+.style_button:hover{
+    background-color: rgb(104, 83, 130);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgb(121, 98, 150);
+    border:black solid 0.5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(134, 112, 161);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(101, 85, 120);
+    border-radius:10px;
+  }
+
+  /*custom scrollbar*/
+
+  .hair_icon{
+    filter:hue-rotate(61deg) saturate(103%) brightness(108%);
+}
