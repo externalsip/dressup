@@ -13,6 +13,12 @@ body{
     width:400px;
     height:400px;
     background-color: purple;
+    position:relative;
+}
+
+#canvas_wrapper{
+    width:400px;
+    height:500px;
     order:2;
 }
 
@@ -31,8 +37,9 @@ body{
     flex-direction: row;
     justify-content: space-evenly;
     overflow-y: scroll;
+    gap: 5px;
     background-color: rgba(0, 0, 0, 0.3);
-    padding-top:5px;
+    padding:5px;
 
 }
 
@@ -101,4 +108,14 @@ body{
 
   .hair_icon{
     filter:hue-rotate(61deg) saturate(103%) brightness(108%);
+}
+
+.sprite{
+    display: inline-block;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
 }

@@ -8,8 +8,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="canvas">
-    </canvas>
+    <div id="canvas_wrapper">
+    <div id="canvas">
+        <img class="sprite body_sprite">
+        <img class="sprite hair_sprite">
+        <img class="sprite head_sprite">
+        <img class="sprite bangs_sprite">
+        <img class="sprite hat_sprite">
+    </div>    
+    <button type="button" id="upload">upload</button>
+    </div>
+
     <form id="wrapper">
         <div id ="menu">
         </div>
@@ -18,6 +27,8 @@
         </div>
     </form>
 
+
     <script src="script.js"></script>
+    <script src="html2canvas.min.js"></script>
 </body>
 </html>
