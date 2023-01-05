@@ -32,14 +32,15 @@ body{
 #menu{
     width:100%;
     height:100%;
+    min-width: 500px;
     display:flex;    
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
     overflow-y: scroll;
-    gap: 5px;
+    gap: 10px;
     background-color: rgba(0, 0, 0, 0.3);
-    padding:5px;
+    padding: 20px 0 20px 0;
 
 }
 
@@ -75,8 +76,8 @@ body{
 
 .style_button{
     background-color: rgb(134, 106, 168);
-    width:250px;
-    height:250px;
+    width:225px;
+    height:225px;
     background-size:contain;
     text-align: center;
 }
