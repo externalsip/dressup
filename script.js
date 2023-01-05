@@ -18,8 +18,7 @@ let eyesArr = ["media/eyes/eyes_chill.png", "media/eyes/eyes_closed.png", "media
 "media/eyes/X.png"];
 let mouthArr = ["media/mouth/mouth_happy.png", "media/mouth/mouth_cat.png", "media/mouth/mouth_minecraftskin.png", "media/mouth/mouth_morbintime.png", "media/mouth/mouth_neco.png", "media/mouth/mouth_neutral.png", "media/mouth/mouth_sad.png",
 "media/mouth/mouth_sick.png", "media/mouth/mouth_smile.png", "media/mouth/mouth_stolfer.png"];
-let clothesArr = ["media/clothes/tshirt.png", "media/clothes/dress_shirt.png", "media/clothes/suit.png", "media/clothes/waistcoat.png", "media/clothes/bra.png", "media/clothes/spaghettistrap.png", "media/clothes/tubetoplol.png", "media/clothes/wifebeater.png",
-"media/clothes/"];
+let clothesArr = ["media/clothes/tshirt.png", "media/clothes/dress_shirt.png", "media/clothes/suit.png", "media/clothes/waistcoat.png", "media/clothes/bra.png", "media/clothes/spaghettistrap.png", "media/clothes/tubetoplol.png", "media/clothes/wifebeater.png"];
     for(let i = 0; i < iconsArr.length; i++){
         const input = document.createElement("input");
             input.setAttribute("type", "radio");
@@ -197,7 +196,7 @@ category4.addEventListener("click", function(){
 });
 
 category5.addEventListener("click", function(){
-    console.log("eyes");
+    console.log("mouth");
     console.log(menu_buttons.length);
     if(menu.getAttribute("value") != 5){
         menu.setAttribute("value", 5);
@@ -227,6 +226,39 @@ category5.addEventListener("click", function(){
     menu_buttons = menu.querySelectorAll("input");
     return menu_buttons;
 });
+
+category6.addEventListener("click", function(){
+    console.log("clothes");
+    console.log(menu_buttons.length);
+    if(menu.getAttribute("value") != 6){
+        menu.setAttribute("value", 6);
+        while(menu.firstChild){
+            menu.removeChild(menu.firstChild);
+        }
+        for(let i = 0; i < clothesArr.length; i++){
+            console.log("hi");
+            const input = document.createElement("input");
+            input.setAttribute("type", "radio");
+            input.setAttribute("id", ("button"+i));
+            input.setAttribute("name", "clothes");
+            input.setAttribute("class", "radio");
+            input.setAttribute("onclick", "display(this.value)");
+            input.setAttribute("value", i);
+            const label = document.createElement("label");
+            label.setAttribute("for", ("button"+i));
+            label.setAttribute("class", "style_button");
+            const img = document.createElement("img");
+            img.setAttribute("src", "" + clothesArr[i] + "")
+            img.setAttribute("class", "clothes_icon selection_icon");
+            label.appendChild(img);
+            menu.appendChild(input);
+            menu.appendChild(label);
+        }
+    }
+    menu_buttons = menu.querySelectorAll("input");
+    return menu_buttons;
+});
+
 
 function display(val){
     console.log(val);
@@ -259,6 +291,10 @@ function display(val){
             break;
         case 5:
             document.getElementById("mouth_sprite").src = ("" + mouthArr[val] + "");
+            break;
+        case 6:
+            document.getElementById("clothes_sprite").src = ("" + clothesArr[val] + "");
+            break;
     }
 }
 
