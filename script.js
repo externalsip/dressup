@@ -8,18 +8,31 @@ let hat = document.querySelector(".hat_sprite");
 
 let iconsArr = ["media/icons/body_icon.png", "media/icons/hat_icon.png", "media/icons/hair_icon.png", "media/icons/bangs_icon.png", "media/icons/eyes_icon.png", "media/icons/mouth_icon.png", 
 "media/icons/shirt_icon.png", "media/icons/face_acc_icon.png", "media/icons/facial_hair_icon.png"];
+
 let bodyArr = ["media/body/head.png", "media/body/body.png"];
+
 let hatsArr = ["media/hats/aviator_goggles.png", "media/hats/beret_military.png", "media/hats/beret_military_var2.png", "media/hats/bow.png", "media/hats/bow_double.png", "media/hats/brimmed_hat.png",
 "media/hats/cap_front.png", "media/hats/cap_backwards.png", "media/hats/french_beret.png", "media/hats/headphones.png", "media/hats/headphones_cat.png", "media/hats/mobcap.png", "media/hats/peaked_cap_black.png",
 "media/hats/peaked_cap_white.png", "media/hats/plumbob.png", "media/hats/top_hat.png", "media/hats/top_hat_var2.png"];
+
 let hairArr = ["media/hair/hair_long_var1.png", "media/hair/longest_hair.png", "media/hair/scruffy.png", "media/hair/sorta_short_hair.png"];
+
 let bangsArr = ["media/bangs/anime_hair_vents.png", "media/bangs/bangs_split.png", "media/bangs/hairstyle2.png", "media/bangs/hime_bangs.png", "media/bangs/side_bangs.png", "media/bangs/twintails.png"];
+
 let eyesArr = ["media/eyes/eyes_chill.png", "media/eyes/eyes_closed.png", "media/eyes/eyes_evil.png", "media/eyes/eyes_psycho.png", "media/eyes/hmmm.png", "media/eyes/sus.png", "media/eyes/wink.png", 
 "media/eyes/X.png"];
+
 let mouthArr = ["media/mouth/mouth_happy.png", "media/mouth/mouth_cat.png", "media/mouth/mouth_minecraftskin.png", "media/mouth/mouth_morbintime.png", "media/mouth/mouth_neco.png", "media/mouth/mouth_neutral.png", "media/mouth/mouth_sad.png",
 "media/mouth/mouth_sick.png", "media/mouth/mouth_smile.png", "media/mouth/mouth_stolfer.png"];
+
 let clothesArr = ["media/clothes/tshirt.png", "media/clothes/dress_shirt.png", "media/clothes/suit.png", "media/clothes/waistcoat.png", "media/clothes/bra.png", "media/clothes/spaghettistrap.png", "media/clothes/tubetoplol.png", "media/clothes/wifebeater.png"];
-    for(let i = 0; i < iconsArr.length; i++){
+
+let faceAccArr = ["media/face_acc/aviators_black.png", "media/face_acc/aviators_empty.png", "media/face_acc/blindfold.png", "media/face_acc/browline.png", "media/face_acc/cancer.png", "media/face_acc/facemask.png", "media/face_acc/rectangle_glasses.png", "media/face_acc/round.png",
+ "media/face_acc/shutter_shades.png", "media/face_acc/uohhh.png"];
+
+let faceHairArr = ["media/facial_hair/bri_ish.png", "media/facial_hair/fu_manchu.png", "media/facial_hair/mustache.png", "media/facial_hair/walrus.png"];
+
+for(let i = 0; i < iconsArr.length; i++){
         const input = document.createElement("input");
             input.setAttribute("type", "radio");
             input.setAttribute("id", ("category"+i));
@@ -34,7 +47,8 @@ let clothesArr = ["media/clothes/tshirt.png", "media/clothes/dress_shirt.png", "
             label.appendChild(img);
             category_wrapper.appendChild(input);
             category_wrapper.appendChild(label);
-    }
+    };
+
 category0.addEventListener("click", function(){
     console.log("body");
     console.log(menu_buttons.length);
@@ -61,11 +75,12 @@ category0.addEventListener("click", function(){
             label.appendChild(img);
             menu.appendChild(input);
             menu.appendChild(label);
-        } 
-    }
+        };
+    };
     menu_buttons = menu.querySelectorAll("input");
     return menu_buttons;
 });   
+
 category1.addEventListener("click", function(){
     console.log("hats");
     console.log(menu_buttons.length);
@@ -259,6 +274,69 @@ category6.addEventListener("click", function(){
     return menu_buttons;
 });
 
+category7.addEventListener("click", function(){
+    console.log("face_accessory");
+    console.log(menu_buttons.length);
+    if(menu.getAttribute("value") != 7){
+        menu.setAttribute("value", 7);
+        while(menu.firstChild){
+            menu.removeChild(menu.firstChild);
+        }
+        for(let i = 0; i < faceAccArr.length; i++){
+            console.log("hi");
+            const input = document.createElement("input");
+            input.setAttribute("type", "radio");
+            input.setAttribute("id", ("button"+i));
+            input.setAttribute("name", "face_acc");
+            input.setAttribute("class", "radio");
+            input.setAttribute("onclick", "display(this.value)");
+            input.setAttribute("value", i);
+            const label = document.createElement("label");
+            label.setAttribute("for", ("button"+i));
+            label.setAttribute("class", "style_button");
+            const img = document.createElement("img");
+            img.setAttribute("src", "" + faceAccArr[i] + "")
+            img.setAttribute("class", "face_acc_icon selection_icon");
+            label.appendChild(img);
+            menu.appendChild(input);
+            menu.appendChild(label);
+        }
+    }
+    menu_buttons = menu.querySelectorAll("input");
+    return menu_buttons;
+});
+
+category8.addEventListener("click", function(){
+    console.log("face_accessory");
+    console.log(menu_buttons.length);
+    if(menu.getAttribute("value") != 8){
+        menu.setAttribute("value", 8);
+        while(menu.firstChild){
+            menu.removeChild(menu.firstChild);
+        }
+        for(let i = 0; i < faceHairArr.length; i++){
+            console.log("hi");
+            const input = document.createElement("input");
+            input.setAttribute("type", "radio");
+            input.setAttribute("id", ("button"+i));
+            input.setAttribute("name", "face_acc");
+            input.setAttribute("class", "radio");
+            input.setAttribute("onclick", "display(this.value)");
+            input.setAttribute("value", i);
+            const label = document.createElement("label");
+            label.setAttribute("for", ("button"+i));
+            label.setAttribute("class", "style_button");
+            const img = document.createElement("img");
+            img.setAttribute("src", "" + faceHairArr[i] + "")
+            img.setAttribute("class", "face_hair_icon selection_icon");
+            label.appendChild(img);
+            menu.appendChild(input);
+            menu.appendChild(label);
+        }
+    }
+    menu_buttons = menu.querySelectorAll("input");
+    return menu_buttons;
+});
 
 function display(val){
     console.log(val);
@@ -295,6 +373,11 @@ function display(val){
         case 6:
             document.getElementById("clothes_sprite").src = ("" + clothesArr[val] + "");
             break;
+        case 7:
+            document.getElementById("face_acc_sprite").src = ("" + faceAccArr[val] + "");
+            break;
+        case 8:
+            document.getElementById("face_hair").src = ("" + faceHairArr[val] + "");
     }
 }
 
