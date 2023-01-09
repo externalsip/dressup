@@ -4,7 +4,8 @@ let menu = document.getElementById("menu");
 let menu_buttons = menu.querySelectorAll("input");
 let category_wrapper = document.getElementById("category_wrapper");
 let body = document.querySelector("body");
-let hat = document.querySelector(".hat_sprite");
+
+//Declaring the variables that will be used for checks and loops on elements of the HTML.
 
 let iconsArr = ["media/icons/body_icon.png", "media/icons/hat_icon.png", "media/icons/hair_icon.png", "media/icons/bangs_icon.png", "media/icons/eyes_icon.png", "media/icons/mouth_icon.png", 
 "media/icons/shirt_icon.png", "media/icons/face_acc_icon.png", "media/icons/facial_hair_icon.png"];
@@ -17,7 +18,11 @@ let hatsArr = ["media/hats/aviator_goggles.png", "media/hats/beret_military.png"
 
 let hairArr = ["media/hair/hair_long_var1.png", "media/hair/longest_hair.png", "media/hair/scruffy.png", "media/hair/sorta_short_hair.png"];
 
+let hairOutlineArr = ["media/outlines/hair/outline_hair_long.png", "media/outlines/hair/longest_hair_outline.png", "media/outlines/hair/scruffy_outline.png", "media/outlines/hair/sorta_short_outline.png"];
+
 let bangsArr = ["media/bangs/anime_hair_vents.png", "media/bangs/bangs_split.png", "media/bangs/hairstyle2.png", "media/bangs/hime_bangs.png", "media/bangs/side_bangs.png", "media/bangs/twintails.png"];
+
+let bangsOutlineArr = ["media/outlines/bangs/vent_outline.png", "media/outlines/bangs/outline_bangs_split.png", "media/outlines/bangs/hairstyle2.png", "media/outlines/bangs/hime_bangs_outline.png", "media/outlines/bangs/side_bangs_outline.png", "media/outlines/bangs/twintails_outline.png"];
 
 let eyesArr = ["media/eyes/eyes_chill.png", "media/eyes/eyes_closed.png", "media/eyes/eyes_evil.png", "media/eyes/eyes_psycho.png", "media/eyes/hmmm.png", "media/eyes/sus.png", "media/eyes/wink.png", 
 "media/eyes/X.png"];
@@ -31,6 +36,11 @@ let faceAccArr = ["media/face_acc/aviators_black.png", "media/face_acc/aviators_
  "media/face_acc/shutter_shades.png", "media/face_acc/uohhh.png"];
 
 let faceHairArr = ["media/facial_hair/bri_ish.png", "media/facial_hair/fu_manchu.png", "media/facial_hair/mustache.png", "media/facial_hair/walrus.png"];
+
+//Arrays composed of links to images in the media folder, those will be used to loop on length to display buttons on the UI, 
+//but also to get to links towards the images to get them on both the buttons and the character creator itself.
+
+//Loop to create dynamically the buttons to switch between categories of character pieces.
 
 for(let i = 0; i < iconsArr.length; i++){
         const input = document.createElement("input");
@@ -48,6 +58,10 @@ for(let i = 0; i < iconsArr.length; i++){
             category_wrapper.appendChild(input);
             category_wrapper.appendChild(label);
     };
+
+//The next loops are made for all buttons of each categories, to create the buttons dynamically when the category button assigned to it
+//while also removing the buttons from the last category that was clicked, the loop creates a button, label and image for everything contained in the
+//array for the category. Additionally, it gives a number as value for the div that has the menu id in the HTML.
 
 category0.addEventListener("click", function(){
     console.log("body");
@@ -71,7 +85,7 @@ category0.addEventListener("click", function(){
             label.setAttribute("class", "style_button");
             const img = document.createElement("img");
             img.setAttribute("src", "" + bodyArr[i] + "");
-            img.setAttribute("class", "hat_icon selection_icon");
+            img.setAttribute("class", "body_icon selection_icon");
             label.appendChild(img);
             menu.appendChild(input);
             menu.appendChild(label);
@@ -338,6 +352,10 @@ category8.addEventListener("click", function(){
     return menu_buttons;
 });
 
+
+//When an object button is clicked it triggers a function that takes as parameter the button's value
+//it then checks for the value currently on the menu, and runs a switch on it, the values being linked to each categories.
+//it then looks for the appropriate img tag in the HTML page and gives it the item in the array linked to the value of the button that was clicked as an src attribute.
 function display(val){
     console.log(val);
     console.log("hi");
@@ -360,9 +378,22 @@ function display(val){
             break;
         case 2:
             document.getElementById("hair_sprite").src = ("" + hairArr[val] + "");
+            if(hairOutlineArr[val] != ""){
+                document.getElementById("hair_outline").src = ("" + hairOutlineArr[val] + "");
+            }
+            else{
+                console.log("Missing outline, fix this mr Balls.");
+            }
             break;
         case 3:
             document.getElementById("bangs_sprite").src = ("" + bangsArr[val] + "");
+            if(bangsOutlineArr[val] != ""){
+                document.getElementById("bangs_outline").src = ("" + bangsOutlineArr[val] + "");
+            }
+            else{
+                console.log("Missing outline, fix this mr Balls.");
+            }
+
             break;
         case 4:
             document.getElementById("eyes_sprite").src = ("" + eyesArr[val] + "");
@@ -380,6 +411,9 @@ function display(val){
             document.getElementById("face_hair").src = ("" + faceHairArr[val] + "");
     }
 }
+
+//Script not made by myself, used to make a downloadable image out of what is contained in the div with the canvas ID,
+//there is an issue with filters not being taken in account so the function might be removed in the future.
 
 function downloadURI(uri, name) {
     var link = document.createElement("a");

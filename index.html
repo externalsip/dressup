@@ -10,11 +10,15 @@
 <body>
     <div id="canvas_wrapper">
     <div id="canvas">
+        <img class="sprite" id="hat_outline">
+        <img class="sprite" id="body_outline">
+        <img class="sprite" id="bangs_outline">
+        <img class="sprite" id="hair_outline">
         <img class="sprite" id="hair_sprite">
         <img class="sprite" id="head_sprite">
         <img class="sprite" id="eyes_sprite">
         <img class="sprite" id="mouth_sprite">
-        <img class="sprite" id="face_hair">    
+        <img class="sprite" id="face_hair">
         <img class="sprite" id="face_acc_sprite">
         <img class="sprite" id="bangs_sprite">
         <img class="sprite" id="hat_sprite">
@@ -28,6 +32,14 @@
 
     <form id="wrapper">
         <div id ="menu">
+            <input type="radio" id="button0" name="body" onclick="display(this.value)" value="0" class="radio">
+            <label for="button0" class="style_button">
+                <img src="media/body/head.png" class="body_icon selection_icon">
+            </label>
+            <input type="radio" id="button1" name="body" onclick="display(this.value)" value="1" class="radio">
+            <label for="button1" class="style_button">
+                <img src="media/body/body.png" class="body_icon selection_icon">
+            </label>
         </div>
         <div id="category_wrapper">
 
