@@ -12,9 +12,16 @@ let iconsArr = ["media/icons/body_icon.png", "media/icons/hat_icon.png", "media/
 
 let bodyArr = ["media/body/head.png", "media/body/body.png"];
 
+let bodyOutlineArr = ["", "media/outlines/body/outline_body_main.png"];
+
 let hatsArr = ["media/hats/aviator_goggles.png", "media/hats/beret_military.png", "media/hats/beret_military_var2.png", "media/hats/bow.png", "media/hats/bow_double.png", "media/hats/brimmed_hat.png",
 "media/hats/cap_front.png", "media/hats/cap_backwards.png", "media/hats/french_beret.png", "media/hats/headphones.png", "media/hats/headphones_cat.png", "media/hats/mobcap.png", "media/hats/peaked_cap_black.png",
 "media/hats/peaked_cap_white.png", "media/hats/plumbob.png", "media/hats/top_hat.png", "media/hats/top_hat_var2.png"];
+
+let hatsOutlineArr = ["media/outlines/hat/aviator_goggles_outline.png", "media/outlines/hat/beret_military_outline.png", "media/outlines/hat/beret_military_outline_var2.png", "media/outlines/hat/bow_outline.png",
+"media/outlines/hat/bow_double_outline.png", "", "media/outlines/hat/cap_outline.png", "media/outlines/hat/cap_outline.png", "media/outlines/hat/french_beret_outline.png", "media/outlines/hat/headphones_outline.png",
+"media/outlines/hat/headphones_cat_outline.png", "media/outlines/hat/mobcap_outline.png", "media/outlines/hat/peaked_cap_outline.png", "media/outlines/hat/peaked_cap_outline.png", "media/outlines/hat/plumbob_outline.png",
+"media/outlines/hat/top_hat_outline.png", "media/outlines/hat/top_hat_var2_outline.png"];
 
 let hairArr = ["media/hair/hair_long_var1.png", "media/hair/longest_hair.png", "media/hair/scruffy.png", "media/hair/sorta_short_hair.png"];
 
@@ -370,11 +377,18 @@ function display(val){
             }
             else{
                 document.getElementById("body_sprite").src = ("" + bodyArr[val] + "");
+                document.getElementById("body_outline").src = ("" + bodyOutlineArr[val] + "");
             }
 
             break;
         case 1:
             document.getElementById("hat_sprite").src = ("" + hatsArr[val] + "");
+            if(hatsOutlineArr[val] != ""){
+                document.getElementById("hat_outline").src = ("" + hatsOutlineArr[val] + "");
+            }
+            else{
+                console.log("Missing outline, fix this mr Balls.");
+            }
             break;
         case 2:
             document.getElementById("hair_sprite").src = ("" + hairArr[val] + "");
