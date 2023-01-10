@@ -4,9 +4,9 @@ let menu = document.getElementById("menu");
 let menu_buttons = menu.querySelectorAll("input");
 let category_wrapper = document.getElementById("category_wrapper");
 let body = document.querySelector("body");
-const hue = document.getElementById("slider_1");
-const saturation = document.getElementById("slider_2");
-const brightness = document.getElementById("slider_3");
+let hue = document.getElementById("slider_1");
+let saturation = document.getElementById("slider_2");
+let brightness = document.getElementById("slider_3");
 
 //Declaring the variables that will be used for checks and loops on elements of the HTML.
 
@@ -77,6 +77,7 @@ category0.addEventListener("click", function(){
     console.log("body");
     console.log(menu_buttons.length);
     if(menu.getAttribute("value") != 0){
+        localStorageRegister(menu.getAttribute("value"));
         menu.setAttribute("value", 0);
         while(menu.firstChild){
             menu.removeChild(menu.firstChild);
@@ -109,6 +110,7 @@ category1.addEventListener("click", function(){
     console.log("hats");
     console.log(menu_buttons.length);
     if(menu.getAttribute("value") != 1){
+        localStorageRegister(menu.getAttribute("value"));
         menu.setAttribute("value", 1);
         while(menu.firstChild){
             menu.removeChild(menu.firstChild);
@@ -142,6 +144,7 @@ category2.addEventListener("click", function(){
     console.log("hair");
     console.log(menu_buttons.length);
     if(menu.getAttribute("value") != 2){
+        localStorageRegister(menu.getAttribute("value"));
         menu.setAttribute("value", 2);
         while(menu.firstChild){
             menu.removeChild(menu.firstChild);
@@ -174,6 +177,7 @@ category3.addEventListener("click", function(){
     console.log("bangs");
     console.log(menu_buttons.length);
     if(menu.getAttribute("value") != 3){
+        localStorageRegister(menu.getAttribute("value"));
         menu.setAttribute("value", 3);
         while(menu.firstChild){
             menu.removeChild(menu.firstChild);
@@ -206,6 +210,7 @@ category4.addEventListener("click", function(){
     console.log("eyes");
     console.log(menu_buttons.length);
     if(menu.getAttribute("value") != 4){
+        localStorageRegister(menu.getAttribute("value"));
         menu.setAttribute("value", 4);
         while(menu.firstChild){
             menu.removeChild(menu.firstChild);
@@ -238,6 +243,7 @@ category5.addEventListener("click", function(){
     console.log("mouth");
     console.log(menu_buttons.length);
     if(menu.getAttribute("value") != 5){
+        localStorageRegister(menu.getAttribute("value"));
         menu.setAttribute("value", 5);
         while(menu.firstChild){
             menu.removeChild(menu.firstChild);
@@ -270,6 +276,7 @@ category6.addEventListener("click", function(){
     console.log("clothes");
     console.log(menu_buttons.length);
     if(menu.getAttribute("value") != 6){
+        localStorageRegister(menu.getAttribute("value"));
         menu.setAttribute("value", 6);
         while(menu.firstChild){
             menu.removeChild(menu.firstChild);
@@ -302,6 +309,7 @@ category7.addEventListener("click", function(){
     console.log("face_accessory");
     console.log(menu_buttons.length);
     if(menu.getAttribute("value") != 7){
+        localStorageRegister(menu.getAttribute("value"));
         menu.setAttribute("value", 7);
         while(menu.firstChild){
             menu.removeChild(menu.firstChild);
@@ -334,6 +342,7 @@ category8.addEventListener("click", function(){
     console.log("face_accessory");
     console.log(menu_buttons.length);
     if(menu.getAttribute("value") != 8){
+        localStorageRegister(menu.getAttribute("value"));
         menu.setAttribute("value", 8);
         while(menu.firstChild){
             menu.removeChild(menu.firstChild);
@@ -352,7 +361,7 @@ category8.addEventListener("click", function(){
             label.setAttribute("class", "style_button");
             const img = document.createElement("img");
             img.setAttribute("src", "" + faceHairArr[i] + "")
-            img.setAttribute("class", "face_hair_icon selection_icon");
+            img.setAttribute("class", "hair_icon selection_icon");
             label.appendChild(img);
             menu.appendChild(input);
             menu.appendChild(label);
@@ -377,6 +386,7 @@ function display(val){
         case 0:
             if(val == 0){                
                 canvas.classList.add("head");
+                localStorage.setItem("category0hue_2", )
                 document.getElementById("head_sprite").src = ("" + bodyArr[val] + "");
             }
             else{                
@@ -425,9 +435,11 @@ function display(val){
             document.getElementById("face_acc_sprite").src = ("" + faceAccArr[val] + "");
             break;
         case 8:
-            document.getElementById("face_hair").src = ("" + faceHairArr[val] + "");
+            document.getElementById("face_hair_sprite").src = ("" + faceHairArr[val] + "");
+            break;
     }
 }
+
 
 hue.addEventListener("input", function(){
     switch(Number(menu.getAttribute("value"))){
@@ -450,6 +462,18 @@ hue.addEventListener("input", function(){
             break;
         case 4:
             document.getElementById("eyes_sprite").style.setProperty("--eyes_hue", hue.value + "deg");
+            break;
+        case 5:
+            document.getElementById("mouth_sprite").style.setProperty("--mouth_hue", hue.value + "deg");
+            break;
+        case 6:
+            document.getElementById("clothes_sprite").style.setProperty("--clothes_hue", hue.value + "deg");
+            break;
+        case 7:
+            document.getElementById("face_acc_sprite").style.setProperty("--faceAcc_hue", hue.value + "deg");
+            break;
+        case 8:
+            document.getElementById("face_hair_sprite").style.setProperty("--faceHair_hue", hue.value + "deg");
             break;
     }
 });
@@ -474,7 +498,19 @@ saturation.addEventListener("input", function(){
             document.getElementById("bangs_sprite").style.setProperty("--bangs_saturation", saturation.value + "%");
             break;
         case 4:
-            document.getElementById("eyes_sprite").style.setProperty("--eyes_saturation", saturation.value + "deg");
+            document.getElementById("eyes_sprite").style.setProperty("--eyes_saturation", saturation.value + "%");
+            break;
+        case 5:
+            document.getElementById("mouth_sprite").style.setProperty("--mouth_saturation", saturation.value + "%");
+            break;
+        case 6:
+            document.getElementById("clothes_sprite").style.setProperty("--clothes_saturation", saturation.value + "%");
+            break;
+        case 7:
+            document.getElementById("face_acc_sprite").style.setProperty("--faceAcc_saturation", saturation.value + "%");
+            break;
+        case 8:
+            document.getElementById("face_hair_sprite").style.setProperty("--faceHair_saturation", saturation.value + "%");
             break;
     }
 });
@@ -501,8 +537,72 @@ brightness.addEventListener("input", function(){
         case 4:
             document.getElementById("eyes_sprite").style.setProperty("--eyes_brightness", brightness.value + "%");
             break;
+        case 5:
+            document.getElementById("mouth_sprite").style.setProperty("--mouth_brightness", brightness.value + "%");
+            break;
+        case 6:
+            document.getElementById("clothes_sprite").style.setProperty("--clothes_brightness", brightness.value + "%");
+            break;
+        case 7:
+            document.getElementById("face_acc_sprite").style.setProperty("--faceAcc_brightness", brightness.value + "%");
+            break;
+        case 8:
+            document.getElementById("face_hair_sprite").style.setProperty("--faceHair_brightness", brightness.value + "%");
+            break;
     }
 });
+
+function localStorageRegister(index){
+    switch(Number(index)){
+        case 0:
+            if(menu.classList.contains("head")){
+                localStorage.setItem("category" + index + "hue_1", hue.value);
+                localStorage.setItem("category" + index + "saturation_1", saturation.value);
+                localStorage.setItem("category" + index + "brightness_1" + brightness.value);
+            }
+            else{
+                localStorage.setItem("category" + index + "hue_2", hue.value);
+                localStorage.setItem("category" + index + "saturation_2", saturation.value);
+                localStorage.setItem("category" + index + "brightness_2", brightness.value);
+            }
+            break;
+        default:
+                localStorage.setItem("category" + index + "hue", hue.value);
+                localStorage.setItem("category" + index + "saturation", saturation.value);
+                localStorage.setItem("category" + index + "brightness", brightness.value);
+            break;
+    }
+}
+
+function localStorageApply(index){
+    switch(Number(index)){
+        case 0:
+            if(menu.classList.contains("head")){
+                if(localStorage.getItem("category0hue_1") != undefined){
+                    hue.value = localStorage.getItem("category0hue_1");
+                    saturation.value = localStorage.getItem("category0saturation_1");
+                    brightness.value = localStorage.getItem("category0brightness_1");
+                }
+                else{
+                    hue.value = 39;
+                    saturation.value = 80;
+                    brightness.value = 113;
+                }
+            }
+            else{
+                if(localStorage.getItem("category0hue_2") != undefined){
+                    hue.value = localStorage.getItem("category0hue_2");
+                    saturation.value = localStorage.getItem("category0saturation_2");
+                    brightness.value = localStorage.getItem("category0brightness_2");
+                }
+                else{
+                    hue.value = 39;
+                    saturation.value = 80;
+                    brightness.value = 113;
+                }
+            }
+    }
+}
 
 //Script not made by myself, used to make a downloadable image out of what is contained in the div with the canvas ID,
 //there is an issue with filters not being taken in account so the function might be removed in the future.

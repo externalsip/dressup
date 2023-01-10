@@ -1,24 +1,45 @@
 *{box-sizing: border-box;}
 
 :root{
-    --head_hue:50deg;
-    --head_saturation: 50%;
-    --head_brightness: 50%;
-    --body_hue:50deg;
-    --body_saturation: 50%;
-    --body_brightness: 50%;
-    --hat_hue:50deg;
-    --hat_saturation: 50%;
-    --hat_brightness: 50%;
-    --hair_hue:50deg;
-    --hair_saturation: 50%;
-    --hair_brightness: 50%;
-    --bangs_hue:50deg;
-    --bangs_saturation: 50%;
-    --bangs_brightness: 50%;
-    --eyes_hue:50deg;
-    --eyes_saturation: 50%;
-    --eyes_brightness: 50%;
+    --head_hue: 39deg;
+    --head_saturation: 80%;
+    --head_brightness: 113%;
+
+    --body_hue: 39deg;
+    --body_saturation: 80%;
+    --body_brightness: 113%;
+
+    --hat_hue: 356deg;
+    --hat_saturation: 71%;
+    --hat_brightness: 90%;
+
+    --hair_hue: 61deg;
+    --hair_saturation: 103%;
+    --hair_brightness: 108%;
+
+    --bangs_hue: 61deg;
+    --bangs_saturation: 103%;
+    --bangs_brightness: 108%;
+
+    --eyes_hue: 154deg;
+    --eyes_saturation: 132%;
+    --eyes_brightness: 131%;
+
+    --mouth_hue: 0deg;
+    --mouth_saturation: 75%;
+    --mouth_brightness: 100%;
+
+    --clothes_hue: 286deg;
+    --clothes_saturation: 0%;
+    --clothes_brightness: 100%;
+
+    --faceAcc_hue: 0deg;
+    --faceAcc_saturation: 0%;
+    --faceAcc_brightness: 100%;
+
+    --faceHair_hue: 61deg;
+    --faceHair_saturation: 103%;
+    --faceHair_brightness: 108%;
 }
 
 body{
@@ -128,8 +149,31 @@ body{
 
   /*custom scrollbar*/
 
-  .hair_icon{
-    filter:hue-rotate(61deg) saturate(103%) brightness(108%);
+.body_icon{
+  filter: hue-rotate(39deg) saturate(80%) brightness(113%);
+}
+
+.hat_icon{
+  filter: hue-rotate(356deg) saturate(71%) brightness(90%);
+}
+
+.hair_icon{
+  filter:hue-rotate(61deg) saturate(103%) brightness(108%);
+}
+
+.eyes_icon{
+  filter: hue-rotate(154deg) saturate(132%) brightness(131%);
+}
+
+.mouth_icon{
+  filter: hue-rotate(0deg) saturate(75%) brightness(100%);
+}
+
+.clothes_icon{
+  filter: hue-rotate(286deg) saturate(0%) brightness(100%);
+}
+.face_acc_icon{
+  filter: hue-rotate(0deg) saturate(0%) brightness(100%);
 }
 
 .sprite{
@@ -205,4 +249,13 @@ body{
 }
 #mouth_sprite{
   filter: hue-rotate(var(--mouth_hue)) saturate(var(--mouth_saturation)) brightness(var(--mouth_brightness));
+}
+#clothes_sprite{
+  filter: hue-rotate(var(--clothes_hue)) saturate(var(--clothes_saturation)) brightness(var(--clothes_brightness));
+}
+#face_acc_sprite{
+  filter: hue-rotate(var(--faceAcc_hue)) saturate(var(--faceAcc_saturation)) brightness(var(--faceAcc_brightness));
+}
+#face_hair_sprite{
+  filter: hue-rotate(var(--faceHair_hue)) saturate(var(--faceHair_saturation)) brightness(var(--faceHair_brightness));
 }
