@@ -4,6 +4,9 @@ let menu = document.getElementById("menu");
 let menu_buttons = menu.querySelectorAll("input");
 let category_wrapper = document.getElementById("category_wrapper");
 let body = document.querySelector("body");
+const hue = document.getElementById("slider_1");
+const saturation = document.getElementById("slider_2");
+const brightness = document.getElementById("slider_3");
 
 //Declaring the variables that will be used for checks and loops on elements of the HTML.
 
@@ -372,14 +375,15 @@ function display(val){
             console.log("bug");
             break;
         case 0:
-            if(val == 0){
+            if(val == 0){                
+                canvas.classList.add("head");
                 document.getElementById("head_sprite").src = ("" + bodyArr[val] + "");
             }
-            else{
+            else{                
+                canvas.classList.remove("head");
                 document.getElementById("body_sprite").src = ("" + bodyArr[val] + "");
                 document.getElementById("body_outline").src = ("" + bodyOutlineArr[val] + "");
             }
-
             break;
         case 1:
             document.getElementById("hat_sprite").src = ("" + hatsArr[val] + "");
@@ -407,7 +411,6 @@ function display(val){
             else{
                 console.log("Missing outline, fix this mr Balls.");
             }
-
             break;
         case 4:
             document.getElementById("eyes_sprite").src = ("" + eyesArr[val] + "");
@@ -425,6 +428,81 @@ function display(val){
             document.getElementById("face_hair").src = ("" + faceHairArr[val] + "");
     }
 }
+
+hue.addEventListener("input", function(){
+    switch(Number(menu.getAttribute("value"))){
+        case 0:
+            if(canvas.classList.contains("head")){
+                document.getElementById("head_sprite").style.setProperty("--head_hue", hue.value + "deg");
+            }
+            else{
+                document.getElementById("body_sprite").style.setProperty("--body_hue", hue.value + "deg");
+            }
+            break;
+        case 1:
+            document.getElementById("hat_sprite").style.setProperty("--hat_hue", hue.value + "deg");
+            break;
+        case 2:
+            document.getElementById("hair_sprite").style.setProperty("--hair_hue", hue.value + "deg");
+            break;
+        case 3:
+            document.getElementById("bangs_sprite").style.setProperty("--bangs_hue", hue.value + "deg");
+            break;
+        case 4:
+            document.getElementById("eyes_sprite").style.setProperty("--eyes_hue", hue.value + "deg");
+            break;
+    }
+});
+
+saturation.addEventListener("input", function(){
+    switch(Number(menu.getAttribute("value"))){
+        case 0:
+            if(canvas.classList.contains("head")){
+                document.getElementById("head_sprite").style.setProperty("--head_saturation", saturation.value + "%");
+            }
+            else{
+                document.getElementById("body_sprite").style.setProperty("--body_saturation", saturation.value + "%");
+            }
+            break;
+        case 1:
+            document.getElementById("hat_sprite").style.setProperty("--hat_satuation", saturation.value + "%");
+            break;
+        case 2:
+            document.getElementById("hair_sprite").style.setProperty("--hair_saturation", saturation.value + "%");
+            break;
+        case 3:
+            document.getElementById("bangs_sprite").style.setProperty("--bangs_saturation", saturation.value + "%");
+            break;
+        case 4:
+            document.getElementById("eyes_sprite").style.setProperty("--eyes_saturation", saturation.value + "deg");
+            break;
+    }
+});
+
+brightness.addEventListener("input", function(){
+    switch(Number(menu.getAttribute("value"))){
+        case 0:
+            if(canvas.classList.contains("head")){
+                document.getElementById("head_sprite").style.setProperty("--head_brightness", brightness.value + "%");
+            }
+            else{
+                document.getElementById("body_sprite").style.setProperty("--body_brightness", brightness.value + "%");
+            }
+            break;
+        case 1:
+            document.getElementById("hat_sprite").style.setProperty("--hat_brightness", brightness.value + "%");
+            break;
+        case 2:
+            document.getElementById("hair_sprite").style.setProperty("--hair_brightness", brightness.value + "%");
+            break;
+        case 3:
+            document.getElementById("bangs_sprite").style.setProperty("--bangs_brightness", brightness.value + "%");
+            break;
+        case 4:
+            document.getElementById("eyes_sprite").style.setProperty("--eyes_brightness", brightness.value + "%");
+            break;
+    }
+});
 
 //Script not made by myself, used to make a downloadable image out of what is contained in the div with the canvas ID,
 //there is an issue with filters not being taken in account so the function might be removed in the future.

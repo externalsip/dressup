@@ -31,7 +31,7 @@
     </div>
 
     <form id="wrapper">
-        <div id ="menu">
+        <div id ="menu" value="0">
             <input type="radio" id="button0" name="body" onclick="display(this.value)" value="0" class="radio">
             <label for="button0" class="style_button">
                 <img src="media/body/head.png" class="body_icon selection_icon">
@@ -41,10 +41,23 @@
                 <img src="media/body/body.png" class="body_icon selection_icon">
             </label>
         </div>
+
         <div id="category_wrapper">
 
+        </div>        
+        <div class="sliders_container">
+            <div>
+                <input type="range" min="0" max="360" value="0" class="slider" id="slider_1">      
+            </div>       
+            <div class="slide_container">          
+                <input type="range" min="0" max="200" value="0" class="slider" id="slider_2">           
+            </div>            
+            <div class="slide_container">             
+                <input type="range" min="0" max="200" value="0" class="slider" id="slider_3">  
+            </div>       
         </div>
-    </form>
+
+    </form>        
 
 
     <script src="script.js"></script>
