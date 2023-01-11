@@ -236,7 +236,7 @@ body{
   filter: hue-rotate(var(--body_hue)) saturate(var(--body_saturation)) brightness(var(--body_brightness));
 }
 #hat_sprite{
-  filter: hue-rotate(var(--hat_hue)) saturate(var(--hat_saturation)) brightness(var(--hat_saturation));
+  filter: hue-rotate(var(--hat_hue)) saturate(var(--hat_saturation)) brightness(var(--hat_brightness));
 }
 #hair_sprite{
   filter: hue-rotate(var(--hair_hue)) saturate(var(--hair_saturation)) brightness(var(--hair_brightness));

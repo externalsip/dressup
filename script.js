@@ -489,7 +489,7 @@ saturation.addEventListener("input", function(){
             }
             break;
         case 1:
-            document.getElementById("hat_sprite").style.setProperty("--hat_satuation", saturation.value + "%");
+            document.getElementById("hat_sprite").style.setProperty("--hat_saturation", saturation.value + "%");
             break;
         case 2:
             document.getElementById("hair_sprite").style.setProperty("--hair_saturation", saturation.value + "%");
