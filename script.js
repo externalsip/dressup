@@ -386,7 +386,7 @@ function display(val){
         case 0:
             if(val == 0){                
                 canvas.classList.add("head");
-                localStorage.setItem("category0hue_2", )
+                localStorage.setItem("category0hue_2", hue.value)
                 document.getElementById("head_sprite").src = ("" + bodyArr[val] + "");
             }
             else{                
