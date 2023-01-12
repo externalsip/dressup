@@ -18,35 +18,35 @@ let bodyArr = ["media/body/head.png", "media/body/body.png"];
 
 let bodyOutlineArr = ["", "media/outlines/body/outline_body_main.png"];
 
-let hatsArr = ["media/hats/aviator_goggles.png", "media/hats/beret_military.png", "media/hats/beret_military_var2.png", "media/hats/bow.png", "media/hats/bow_double.png", "media/hats/brimmed_hat.png",
+let hatsArr = ["", "media/hats/aviator_goggles.png", "media/hats/beret_military.png", "media/hats/beret_military_var2.png", "media/hats/bow.png", "media/hats/bow_double.png", "media/hats/brimmed_hat.png",
 "media/hats/cap_front.png", "media/hats/cap_backwards.png", "media/hats/french_beret.png", "media/hats/headphones.png", "media/hats/headphones_cat.png", "media/hats/mobcap.png", "media/hats/peaked_cap_black.png",
 "media/hats/peaked_cap_white.png", "media/hats/plumbob.png", "media/hats/top_hat.png", "media/hats/top_hat_var2.png"];
 
-let hatsOutlineArr = ["media/outlines/hat/aviator_goggles_outline.png", "media/outlines/hat/beret_military_outline.png", "media/outlines/hat/beret_military_outline_var2.png", "media/outlines/hat/bow_outline.png",
+let hatsOutlineArr = ["", "media/outlines/hat/aviator_goggles_outline.png", "media/outlines/hat/beret_military_outline.png", "media/outlines/hat/beret_military_var2_outline.png", "media/outlines/hat/bow_outline.png",
 "media/outlines/hat/bow_double_outline.png", "", "media/outlines/hat/cap_outline.png", "media/outlines/hat/cap_outline.png", "media/outlines/hat/french_beret_outline.png", "media/outlines/hat/headphones_outline.png",
 "media/outlines/hat/headphones_cat_outline.png", "media/outlines/hat/mobcap_outline.png", "media/outlines/hat/peaked_cap_outline.png", "media/outlines/hat/peaked_cap_outline.png", "media/outlines/hat/plumbob_outline.png",
 "media/outlines/hat/top_hat_outline.png", "media/outlines/hat/top_hat_var2_outline.png"];
 
-let hairArr = ["media/hair/hair_long_var1.png", "media/hair/longest_hair.png", "media/hair/scruffy.png", "media/hair/sorta_short_hair.png"];
+let hairArr = ["", "media/hair/hair_long_var1.png", "media/hair/longest_hair.png", "media/hair/scruffy.png", "media/hair/sorta_short_hair.png"];
 
-let hairOutlineArr = ["media/outlines/hair/outline_hair_long.png", "media/outlines/hair/longest_hair_outline.png", "media/outlines/hair/scruffy_outline.png", "media/outlines/hair/sorta_short_outline.png"];
+let hairOutlineArr = ["", "media/outlines/hair/outline_hair_long.png", "media/outlines/hair/longest_hair_outline.png", "media/outlines/hair/scruffy_outline.png", "media/outlines/hair/sorta_short_outline.png"];
 
-let bangsArr = ["media/bangs/anime_hair_vents.png", "media/bangs/bangs_split.png", "media/bangs/hairstyle2.png", "media/bangs/hime_bangs.png", "media/bangs/side_bangs.png", "media/bangs/twintails.png"];
+let bangsArr = ["", "media/bangs/anime_hair_vents.png", "media/bangs/bangs_split.png", "media/bangs/hairstyle2.png", "media/bangs/hime_bangs.png", "media/bangs/side_bangs.png", "media/bangs/twintails.png"];
 
-let bangsOutlineArr = ["media/outlines/bangs/vent_outline.png", "media/outlines/bangs/outline_bangs_split.png", "media/outlines/bangs/hairstyle2.png", "media/outlines/bangs/hime_bangs_outline.png", "media/outlines/bangs/side_bangs_outline.png", "media/outlines/bangs/twintails_outline.png"];
+let bangsOutlineArr = ["", "media/outlines/bangs/vent_outline.png", "media/outlines/bangs/outline_bangs_split.png", "media/outlines/bangs/hairstyle2.png", "media/outlines/bangs/hime_bangs_outline.png", "media/outlines/bangs/side_bangs_outline.png", "media/outlines/bangs/twintails_outline.png"];
 
-let eyesArr = ["media/eyes/eyes_chill.png", "media/eyes/eyes_closed.png", "media/eyes/eyes_evil.png", "media/eyes/eyes_psycho.png", "media/eyes/hmmm.png", "media/eyes/sus.png", "media/eyes/wink.png", 
+let eyesArr = ["", "media/eyes/eyes_chill.png", "media/eyes/eyes_closed.png", "media/eyes/eyes_evil.png", "media/eyes/eyes_psycho.png", "media/eyes/hmmm.png", "media/eyes/sus.png", "media/eyes/wink.png", 
 "media/eyes/X.png"];
 
-let mouthArr = ["media/mouth/mouth_happy.png", "media/mouth/mouth_cat.png", "media/mouth/mouth_minecraftskin.png", "media/mouth/mouth_morbintime.png", "media/mouth/mouth_neco.png", "media/mouth/mouth_neutral.png", "media/mouth/mouth_sad.png",
+let mouthArr = ["", "media/mouth/mouth_happy.png", "media/mouth/mouth_cat.png", "media/mouth/mouth_minecraftskin.png", "media/mouth/mouth_morbintime.png", "media/mouth/mouth_neco.png", "media/mouth/mouth_neutral.png", "media/mouth/mouth_sad.png",
 "media/mouth/mouth_sick.png", "media/mouth/mouth_smile.png", "media/mouth/mouth_stolfer.png"];
 
-let clothesArr = ["media/clothes/tshirt.png", "media/clothes/dress_shirt.png", "media/clothes/suit.png", "media/clothes/waistcoat.png", "media/clothes/bra.png", "media/clothes/spaghettistrap.png", "media/clothes/tubetoplol.png", "media/clothes/wifebeater.png"];
+let clothesArr = ["", "media/clothes/tshirt.png", "media/clothes/dress_shirt.png", "media/clothes/suit.png", "media/clothes/waistcoat.png", "media/clothes/bra.png", "media/clothes/spaghettistrap.png", "media/clothes/tubetoplol.png", "media/clothes/wifebeater.png"];
 
-let faceAccArr = ["media/face_acc/aviators_black.png", "media/face_acc/aviators_empty.png", "media/face_acc/blindfold.png", "media/face_acc/browline.png", "media/face_acc/cancer.png", "media/face_acc/facemask.png", "media/face_acc/rectangle_glasses.png", "media/face_acc/round.png",
+let faceAccArr = ["", "media/face_acc/aviators_black.png", "media/face_acc/aviators_empty.png", "media/face_acc/blindfold.png", "media/face_acc/browline.png", "media/face_acc/cancer.png", "media/face_acc/facemask.png", "media/face_acc/rectangle_glasses.png", "media/face_acc/round.png",
  "media/face_acc/shutter_shades.png", "media/face_acc/uohhh.png"];
 
-let faceHairArr = ["media/facial_hair/bri_ish.png", "media/facial_hair/fu_manchu.png", "media/facial_hair/mustache.png", "media/facial_hair/walrus.png"];
+let faceHairArr = ["", "media/facial_hair/bri_ish.png", "media/facial_hair/fu_manchu.png", "media/facial_hair/mustache.png", "media/facial_hair/walrus.png"];
 
 //Arrays composed of links to images in the media folder, those will be used to loop on length to display buttons on the UI, 
 //but also to get to links towards the images to get them on both the buttons and the character creator itself.
@@ -137,10 +137,12 @@ category1.addEventListener("click", function(){
             const label = document.createElement("label");
             label.setAttribute("for", ("button"+i));
             label.setAttribute("class", "style_button");
-            const img = document.createElement("img");
-            img.setAttribute("src", "" + hatsArr[i] + "");
-            img.setAttribute("class", "hat_icon selection_icon");
-            label.appendChild(img);
+            if(i != 0){
+                const img = document.createElement("img");
+                img.setAttribute("src", "" + hatsArr[i] + "");
+                img.setAttribute("class", "hat_icon selection_icon");
+                label.appendChild(img);
+            }
             menu.appendChild(input);
             menu.appendChild(label);
         }
@@ -173,10 +175,12 @@ category2.addEventListener("click", function(){
             const label = document.createElement("label");
             label.setAttribute("for", ("button"+i));
             label.setAttribute("class", "style_button");
-            const img = document.createElement("img");
-            img.setAttribute("src", "" + hairArr[i] + "")
-            img.setAttribute("class", "hair_icon selection_icon");
-            label.appendChild(img);
+            if(i != 0){
+                const img = document.createElement("img");
+                img.setAttribute("src", "" + hairArr[i] + "")
+                img.setAttribute("class", "hair_icon selection_icon");
+                label.appendChild(img);
+            }
             menu.appendChild(input);
             menu.appendChild(label);
         }
@@ -208,10 +212,12 @@ category3.addEventListener("click", function(){
             const label = document.createElement("label");
             label.setAttribute("for", ("button"+i));
             label.setAttribute("class", "style_button");
-            const img = document.createElement("img");
-            img.setAttribute("src", "" + bangsArr[i] + "")
-            img.setAttribute("class", "hair_icon selection_icon");
-            label.appendChild(img);
+            if(i != 0){
+                const img = document.createElement("img");
+                img.setAttribute("src", "" + bangsArr[i] + "")
+                img.setAttribute("class", "hair_icon selection_icon");
+                label.appendChild(img);
+            }
             menu.appendChild(input);
             menu.appendChild(label);
         }
@@ -243,10 +249,12 @@ category4.addEventListener("click", function(){
             const label = document.createElement("label");
             label.setAttribute("for", ("button"+i));
             label.setAttribute("class", "style_button");
-            const img = document.createElement("img");
-            img.setAttribute("src", "" + eyesArr[i] + "")
-            img.setAttribute("class", "eyes_icon selection_icon");
-            label.appendChild(img);
+            if(i != 0){
+                const img = document.createElement("img");
+                img.setAttribute("src", "" + eyesArr[i] + "")
+                img.setAttribute("class", "eyes_icon selection_icon");
+                label.appendChild(img);
+            }
             menu.appendChild(input);
             menu.appendChild(label);
         }
@@ -278,10 +286,12 @@ category5.addEventListener("click", function(){
             const label = document.createElement("label");
             label.setAttribute("for", ("button"+i));
             label.setAttribute("class", "style_button");
-            const img = document.createElement("img");
-            img.setAttribute("src", "" + mouthArr[i] + "")
-            img.setAttribute("class", "mouth_icon selection_icon");
-            label.appendChild(img);
+            if(i != 0){
+                const img = document.createElement("img");
+                img.setAttribute("src", "" + mouthArr[i] + "")
+                img.setAttribute("class", "mouth_icon selection_icon");
+                label.appendChild(img);
+            }
             menu.appendChild(input);
             menu.appendChild(label);
         }
@@ -313,10 +323,13 @@ category6.addEventListener("click", function(){
             const label = document.createElement("label");
             label.setAttribute("for", ("button"+i));
             label.setAttribute("class", "style_button");
-            const img = document.createElement("img");
-            img.setAttribute("src", "" + clothesArr[i] + "")
-            img.setAttribute("class", "clothes_icon selection_icon");
-            label.appendChild(img);
+            if(i != 0){
+                const img = document.createElement("img");
+                img.setAttribute("src", "" + clothesArr[i] + "")
+                img.setAttribute("class", "clothes_icon selection_icon");
+                label.appendChild(img);
+            }
+
             menu.appendChild(input);
             menu.appendChild(label);
         }
@@ -348,10 +361,12 @@ category7.addEventListener("click", function(){
             const label = document.createElement("label");
             label.setAttribute("for", ("button"+i));
             label.setAttribute("class", "style_button");
-            const img = document.createElement("img");
-            img.setAttribute("src", "" + faceAccArr[i] + "")
-            img.setAttribute("class", "face_acc_icon selection_icon");
-            label.appendChild(img);
+            if(i != 0){
+                const img = document.createElement("img");
+                img.setAttribute("src", "" + faceAccArr[i] + "")
+                img.setAttribute("class", "face_acc_icon selection_icon");
+                label.appendChild(img);
+            }
             menu.appendChild(input);
             menu.appendChild(label);
         }
@@ -383,10 +398,12 @@ category8.addEventListener("click", function(){
             const label = document.createElement("label");
             label.setAttribute("for", ("button"+i));
             label.setAttribute("class", "style_button");
-            const img = document.createElement("img");
-            img.setAttribute("src", "" + faceHairArr[i] + "")
-            img.setAttribute("class", "hair_icon selection_icon");
-            label.appendChild(img);
+            if(i != 0){
+                const img = document.createElement("img");
+                img.setAttribute("src", "" + faceHairArr[i] + "")
+                img.setAttribute("class", "hair_icon selection_icon");
+                label.appendChild(img);
+            }
             menu.appendChild(input);
             menu.appendChild(label);
         }
@@ -457,46 +474,103 @@ function display(val){
             }
             break;
         case 1:
-            document.getElementById("hat_sprite").src = ("" + hatsArr[val] + "");
-            if(hatsOutlineArr[val] != ""){
-                document.getElementById("hat_outline").src = ("" + hatsOutlineArr[val] + "");
+            if(val == 0){
+                document.getElementById("hat_sprite").style.display = "none";
+                document.getElementById("hat_outline").style.display = "none";
             }
             else{
-                console.log("Missing outline, fix this mr Balls.");
+                document.getElementById("hat_sprite").style.display = "inline-block";
+                document.getElementById("hat_outline").style.display = "inline-block";
+                document.getElementById("hat_sprite").src = ("" + hatsArr[val] + "");
+                if(hatsOutlineArr[val] != ""){
+                    document.getElementById("hat_outline").src = ("" + hatsOutlineArr[val] + "");
+                }
+                else{
+                    console.log("Missing outline, fix this mr Balls.");
+                }
             }
             break;
         case 2:
-            document.getElementById("hair_sprite").src = ("" + hairArr[val] + "");
-            if(hairOutlineArr[val] != ""){
-                document.getElementById("hair_outline").src = ("" + hairOutlineArr[val] + "");
+            if(val == 0){
+                document.getElementById("hair_sprite").style.display = "none";
+                document.getElementById("hair_outline").style.display = "none";
             }
             else{
-                console.log("Missing outline, fix this mr Balls.");
+                document.getElementById("hair_sprite").style.display = "inline-block";
+                document.getElementById("hair_outline").style.display = "inline-block";
+                document.getElementById("hair_sprite").src = ("" + hairArr[val] + "");
+                if(hairOutlineArr[val] != ""){
+                    document.getElementById("hair_outline").src = ("" + hairOutlineArr[val] + "");
+                }
+                else{
+                    console.log("Missing outline, fix this mr Balls.");
+                }
             }
             break;
         case 3:
-            document.getElementById("bangs_sprite").src = ("" + bangsArr[val] + "");
-            if(bangsOutlineArr[val] != ""){
-                document.getElementById("bangs_outline").src = ("" + bangsOutlineArr[val] + "");
+            if(val == 0){
+                document.getElementById("bangs_sprite").style.display = "none";
+                document.getElementById("bangs_outline").style.display = "none";
             }
             else{
-                console.log("Missing outline, fix this mr Balls.");
-            }
+                document.getElementById("bangs_sprite").style.display = "inline-block";
+                document.getElementById("bangs_outline").style.display = "inline-block";
+                document.getElementById("bangs_sprite").src = ("" + bangsArr[val] + "");
+                if(bangsOutlineArr[val] != ""){
+                    document.getElementById("bangs_outline").src = ("" + bangsOutlineArr[val] + "");
+                }
+                else{
+                    console.log("Missing outline, fix this mr Balls.");
+                }
+                }
             break;
         case 4:
-            document.getElementById("eyes_sprite").src = ("" + eyesArr[val] + "");
+            if(val == 0){
+                document.getElementById("eyes_sprite").style.display = "none";
+            }
+            else{
+                document.getElementById("bangs_sprite").style.display = "inline-block";
+                document.getElementById("eyes_sprite").src = ("" + eyesArr[val] + "");
+            }
+
             break;
         case 5:
-            document.getElementById("mouth_sprite").src = ("" + mouthArr[val] + "");
+            if(val == 0){
+                document.getElementById("mouth_sprite").style.display = "none";
+            }
+            else{
+                document.getElementById("mouth_sprite").style.display = "inline-block";            
+                document.getElementById("mouth_sprite").src = ("" + mouthArr[val] + "");
+            }
             break;
         case 6:
-            document.getElementById("clothes_sprite").src = ("" + clothesArr[val] + "");
+            if(val == 0){
+                document.getElementById("clothes_sprite").style.display = "none";
+            }
+            else{
+                document.getElementById("clothes_sprite").style.display = "inline-block";            
+                document.getElementById("clothes_sprite").src = ("" + clothesArr[val] + "");
+            }
             break;
         case 7:
-            document.getElementById("face_acc_sprite").src = ("" + faceAccArr[val] + "");
+            if(val == 0){
+                document.getElementById("face_acc_sprite").style.display = "none";            
+
+            }
+            else{
+                document.getElementById("face_acc_sprite").style.display = "inline-block";
+                document.getElementById("face_acc_sprite").src = ("" + faceAccArr[val] + "");
+            }
             break;
         case 8:
-            document.getElementById("face_hair_sprite").src = ("" + faceHairArr[val] + "");
+            if(val == 0){
+                document.getElementById("face_hair_sprite").style.display = "none";
+            }
+            else{
+                document.getElementById("face_hair_sprite").style.display = "inline-block";
+                document.getElementById("face_hair_sprite").src = ("" + faceHairArr[val] + "");
+            }
+
             break;
     }
 }
