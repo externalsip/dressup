@@ -7,6 +7,7 @@ let body = document.querySelector("body");
 let hue = document.getElementById("slider_1");
 let saturation = document.getElementById("slider_2");
 let brightness = document.getElementById("slider_3");
+let title = document.getElementById("category_name")
 
 //Declaring the variables that will be used for checks and loops on elements of the HTML.
 
@@ -79,6 +80,13 @@ category0.addEventListener("click", function(){
     if(menu.getAttribute("value") != 0){
         localStorageRegister(menu.getAttribute("value"));
         menu.setAttribute("value", 0);
+        localStorageApply(menu.getAttribute("value"));
+        if(canvas.classList.contains("head")){
+            title.innerHTML = "Head";
+        }
+        else{
+            title.innerHTML = "Body";
+        }
         while(menu.firstChild){
             menu.removeChild(menu.firstChild);
         }
@@ -112,6 +120,8 @@ category1.addEventListener("click", function(){
     if(menu.getAttribute("value") != 1){
         localStorageRegister(menu.getAttribute("value"));
         menu.setAttribute("value", 1);
+        localStorageApply(menu.getAttribute("value"));
+        title.innerHTML = "Hat";
         while(menu.firstChild){
             menu.removeChild(menu.firstChild);
         }
@@ -146,6 +156,8 @@ category2.addEventListener("click", function(){
     if(menu.getAttribute("value") != 2){
         localStorageRegister(menu.getAttribute("value"));
         menu.setAttribute("value", 2);
+        localStorageApply(menu.getAttribute("value"));
+        title.innerHTML = "Hair";
         while(menu.firstChild){
             menu.removeChild(menu.firstChild);
         }
@@ -179,6 +191,8 @@ category3.addEventListener("click", function(){
     if(menu.getAttribute("value") != 3){
         localStorageRegister(menu.getAttribute("value"));
         menu.setAttribute("value", 3);
+        localStorageApply(menu.getAttribute("value"));
+        title.innerHTML = "Bangs";
         while(menu.firstChild){
             menu.removeChild(menu.firstChild);
         }
@@ -212,6 +226,8 @@ category4.addEventListener("click", function(){
     if(menu.getAttribute("value") != 4){
         localStorageRegister(menu.getAttribute("value"));
         menu.setAttribute("value", 4);
+        localStorageApply(menu.getAttribute("value"));
+        title.innerHTML = "Eyes";
         while(menu.firstChild){
             menu.removeChild(menu.firstChild);
         }
@@ -245,6 +261,8 @@ category5.addEventListener("click", function(){
     if(menu.getAttribute("value") != 5){
         localStorageRegister(menu.getAttribute("value"));
         menu.setAttribute("value", 5);
+        localStorageApply(menu.getAttribute("value"));
+        title.innerHTML = "Mouth";
         while(menu.firstChild){
             menu.removeChild(menu.firstChild);
         }
@@ -278,6 +296,8 @@ category6.addEventListener("click", function(){
     if(menu.getAttribute("value") != 6){
         localStorageRegister(menu.getAttribute("value"));
         menu.setAttribute("value", 6);
+        localStorageApply(menu.getAttribute("value"));
+        title.innerHTML = "Clothes";
         while(menu.firstChild){
             menu.removeChild(menu.firstChild);
         }
@@ -311,6 +331,8 @@ category7.addEventListener("click", function(){
     if(menu.getAttribute("value") != 7){
         localStorageRegister(menu.getAttribute("value"));
         menu.setAttribute("value", 7);
+        localStorageApply(menu.getAttribute("value"));
+        title.innerHTML = "Face accessory";
         while(menu.firstChild){
             menu.removeChild(menu.firstChild);
         }
@@ -339,11 +361,13 @@ category7.addEventListener("click", function(){
 });
 
 category8.addEventListener("click", function(){
-    console.log("face_accessory");
+    console.log("face_hair");
     console.log(menu_buttons.length);
     if(menu.getAttribute("value") != 8){
         localStorageRegister(menu.getAttribute("value"));
         menu.setAttribute("value", 8);
+        localStorageApply(menu.getAttribute("value"));
+        title.innerHTML = "Facial hair";
         while(menu.firstChild){
             menu.removeChild(menu.firstChild);
         }
@@ -384,13 +408,50 @@ function display(val){
             console.log("bug");
             break;
         case 0:
-            if(val == 0){                
+            if(val == 0){
+                if(canvas.classList.contains("head") == false){
+                    if(hue.value != 0){
+                        localStorage.setItem("category0hue_2", hue.value);
+                        localStorage.setItem("category0saturation_2", saturation.value);
+                        localStorage.setItem("category0brightness_2", brightness.value);
+                    }
+                }
                 canvas.classList.add("head");
-                localStorage.setItem("category0hue_2", hue.value)
+                title.innerHTML = "Head";
+                if(localStorage.getItem("category0hue_1") != null){
+                    hue.value = localStorage.getItem("category0hue_1");
+                    saturation.value = localStorage.getItem("category0saturation_1");
+                    brightness.value = localStorage.getItem("category0brightness_1");
+                }
+                else{
+                    hue.value = 39;
+                    saturation.value = 80;
+                    brightness.value = 113;
+                }
+                
                 document.getElementById("head_sprite").src = ("" + bodyArr[val] + "");
             }
-            else{                
+            else{
+                if(canvas.classList.contains("head") == true){
+                    if(hue.value != 0){
+                        localStorage.setItem("category0hue_1", hue.value);
+                        localStorage.setItem("category0saturation_1", saturation.value);
+                        localStorage.setItem("category0brightness_1", brightness.value);
+                    }
+                }
                 canvas.classList.remove("head");
+                title.innerHTML = "Body";
+                if(localStorage.getItem("category0hue_2") != null){
+                    hue.value = localStorage.getItem("category0hue_2");
+                    saturation.value = localStorage.getItem("category0saturation_2");
+                    brightness.value = localStorage.getItem("category0brightness_2");
+                }
+                else{
+                    console.log("hue")
+                    hue.value = 39;
+                    saturation.value = 80;
+                    brightness.value = 113;
+                }
                 document.getElementById("body_sprite").src = ("" + bodyArr[val] + "");
                 document.getElementById("body_outline").src = ("" + bodyOutlineArr[val] + "");
             }
@@ -439,7 +500,6 @@ function display(val){
             break;
     }
 }
-
 
 hue.addEventListener("input", function(){
     switch(Number(menu.getAttribute("value"))){
@@ -555,10 +615,10 @@ brightness.addEventListener("input", function(){
 function localStorageRegister(index){
     switch(Number(index)){
         case 0:
-            if(menu.classList.contains("head")){
+            if(canvas.classList.contains("head")){
                 localStorage.setItem("category" + index + "hue_1", hue.value);
                 localStorage.setItem("category" + index + "saturation_1", saturation.value);
-                localStorage.setItem("category" + index + "brightness_1" + brightness.value);
+                localStorage.setItem("category" + index + "brightness_1", brightness.value);
             }
             else{
                 localStorage.setItem("category" + index + "hue_2", hue.value);
@@ -577,8 +637,8 @@ function localStorageRegister(index){
 function localStorageApply(index){
     switch(Number(index)){
         case 0:
-            if(menu.classList.contains("head")){
-                if(localStorage.getItem("category0hue_1") != undefined){
+            if(canvas.classList.contains("head")){
+                if(localStorage.getItem("category0hue_1") != null){
                     hue.value = localStorage.getItem("category0hue_1");
                     saturation.value = localStorage.getItem("category0saturation_1");
                     brightness.value = localStorage.getItem("category0brightness_1");
@@ -590,7 +650,7 @@ function localStorageApply(index){
                 }
             }
             else{
-                if(localStorage.getItem("category0hue_2") != undefined){
+                if(localStorage.getItem("category0hue_2") != null){
                     hue.value = localStorage.getItem("category0hue_2");
                     saturation.value = localStorage.getItem("category0saturation_2");
                     brightness.value = localStorage.getItem("category0brightness_2");
@@ -600,6 +660,102 @@ function localStorageApply(index){
                     saturation.value = 80;
                     brightness.value = 113;
                 }
+            }
+            break;
+        case 1:
+            if(localStorage.getItem("category1hue") != null){
+                hue.value = localStorage.getItem("category1hue");
+                saturation.value = localStorage.getItem("category1saturation");
+                brightness.value = localStorage.getItem("category1brightness");
+            }
+            else{
+                hue.value = 356;
+                saturation.value = 71;
+                brightness.value = 90;
+            }
+            break;
+        case 2:
+            if(localStorage.getItem("category2hue") != null){
+                hue.value = localStorage.getItem("category2hue");
+                saturation.value = localStorage.getItem("category2saturation");
+                brightness.value = localStorage.getItem("category2brightness");
+            }
+            else{
+                hue.value = 61;
+                saturation.value = 103;
+                brightness.value = 108;
+            }
+            break;
+        case 3:
+            if(localStorage.getItem("category3hue") != null){
+                hue.value = localStorage.getItem("category3hue");
+                saturation.value = localStorage.getItem("category3saturation");
+                brightness.value = localStorage.getItem("category3brightness");
+            }
+            else{
+                hue.value = 61;
+                saturation.value = 103;
+                brightness.value = 108;
+            }
+            break;
+        case 4:
+            if(localStorage.getItem("category4hue") != null){
+                hue.value = localStorage.getItem("category4hue");
+                saturation.value = localStorage.getItem("category4saturation");
+                brightness.value = localStorage.getItem("category4brightness");
+            }
+            else{
+                hue.value = 154;
+                saturation.value = 132;
+                brightness.value = 131;
+            }
+            break;
+        case 5:
+            if(localStorage.getItem("category5hue") != null){
+                hue.value = localStorage.getItem("category5hue");
+                saturation.value = localStorage.getItem("category5saturation");
+                brightness.value = localStorage.getItem("category5brightness");
+            }
+            else{
+                hue.value = 0;
+                saturation.value = 75;
+                brightness.value = 100;
+            }
+            break;
+        case 6:
+            if(localStorage.getItem("category6hue") != null){
+                hue.value = localStorage.getItem("category6hue");
+                saturation.value = localStorage.getItem("category6saturation");
+                brightness.value = localStorage.getItem("category6brightness");
+            }
+            else{
+                hue.value = 286;
+                saturation.value = 0;
+                brightness.value = 100;
+            }
+            break;
+        case 7:
+            if(localStorage.getItem("category7hue") != null){
+                hue.value = localStorage.getItem("category7hue");
+                saturation.value = localStorage.getItem("category7saturation");
+                brightness.value = localStorage.getItem("category7brightness");
+            }
+            else{
+                hue.value = 0;
+                saturation.value = 0;
+                brightness.value = 100;
+            }
+            break;
+        case 8:
+            if(localStorage.getItem("category8hue") != null){
+                hue.value = localStorage.getItem("category8hue");
+                saturation.value = localStorage.getItem("category8saturation");
+                brightness.value = localStorage.getItem("category8brightness");
+            }
+            else{
+                hue.value = 61;
+                saturation.value = 103;
+                brightness.value = 108;
             }
     }
 }

@@ -1,4 +1,9 @@
-*{box-sizing: border-box;}
+*{box-sizing: border-box; image-rendering: pixelated; font-family: press_start;}
+
+@font-face {
+  src: url("media/fonts/prstartk.ttf") format("truetype");  
+  font-family: "press_start";
+}
 
 :root{
     --head_hue: 39deg;
@@ -229,6 +234,21 @@ body{
   justify-content: space-around;
   background-color: purple;
 }
+
+#category_name{
+  width:100%;
+  text-align: center;
+  font-size:30px;
+  display:inline-block;
+  margin-bottom: 5px;
+}
+
+.slider_title{
+  width: 100%;
+  text-align: center;
+  font-size:15px;
+}
+
 #head_sprite{
   filter: hue-rotate(var(--head_hue)) saturate(var(--head_saturation)) brightness(var(--head_brightness));
 }
