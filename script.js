@@ -9,6 +9,10 @@ let saturation = document.getElementById("slider_2");
 let brightness = document.getElementById("slider_3");
 let title = document.getElementById("category_name");
 
+body.addEventListener("load", function(){
+    localStorage.clear();
+});
+
 //Declaring the variables that will be used for checks and loops on elements of the HTML.
 
 let iconsArr = ["media/icons/body_icon.png", "media/icons/hat_icon.png", "media/icons/hair_icon.png", "media/icons/bangs_icon.png", "media/icons/eyes_icon.png", "media/icons/mouth_icon.png", 
