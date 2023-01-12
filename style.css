@@ -59,7 +59,7 @@ body{
 #canvas{
     width:400px;
     height:400px;
-    background-color: purple;
+    background-color: rgb(134, 112, 161);
     position:relative;
 }
 
@@ -232,7 +232,7 @@ body{
   display:flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: purple;
+  background-color: rgb(134, 112, 161);
 }
 
 #category_name{

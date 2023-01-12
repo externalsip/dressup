@@ -7,7 +7,7 @@ let body = document.querySelector("body");
 let hue = document.getElementById("slider_1");
 let saturation = document.getElementById("slider_2");
 let brightness = document.getElementById("slider_3");
-let title = document.getElementById("category_name")
+let title = document.getElementById("category_name");
 
 //Declaring the variables that will be used for checks and loops on elements of the HTML.
 
@@ -584,31 +584,31 @@ brightness.addEventListener("input", function(){
             else{
                 document.getElementById("body_sprite").style.setProperty("--body_brightness", brightness.value + "%");
             }
-            break;
+        break;
         case 1:
             document.getElementById("hat_sprite").style.setProperty("--hat_brightness", brightness.value + "%");
-            break;
+        break;
         case 2:
             document.getElementById("hair_sprite").style.setProperty("--hair_brightness", brightness.value + "%");
-            break;
+        break;
         case 3:
             document.getElementById("bangs_sprite").style.setProperty("--bangs_brightness", brightness.value + "%");
-            break;
+        break;
         case 4:
             document.getElementById("eyes_sprite").style.setProperty("--eyes_brightness", brightness.value + "%");
-            break;
+        break;
         case 5:
             document.getElementById("mouth_sprite").style.setProperty("--mouth_brightness", brightness.value + "%");
-            break;
+        break;
         case 6:
             document.getElementById("clothes_sprite").style.setProperty("--clothes_brightness", brightness.value + "%");
-            break;
+        break;
         case 7:
             document.getElementById("face_acc_sprite").style.setProperty("--faceAcc_brightness", brightness.value + "%");
-            break;
+        break;
         case 8:
             document.getElementById("face_hair_sprite").style.setProperty("--faceHair_brightness", brightness.value + "%");
-            break;
+        break;
     }
 });
 
@@ -757,6 +757,94 @@ function localStorageApply(index){
                 saturation.value = 103;
                 brightness.value = 108;
             }
+    }
+}
+
+document.getElementById("reset").addEventListener("click", function(){
+    localStorage.clear();
+    propertyReset();
+    sliderReset();
+});
+
+function propertyReset(){
+    document.getElementById("head_sprite").style.setProperty("--head_hue", 39 + "deg");
+    document.getElementById("head_sprite").style.setProperty("--head_saturation", 80 + "%");
+    document.getElementById("head_sprite").style.setProperty("--head_brightness", 113 + "%");
+    document.getElementById("body_sprite").style.setProperty("--body_hue", 39 + "deg");
+    document.getElementById("body_sprite").style.setProperty("--body_saturation", 80 + "%");
+    document.getElementById("body_sprite").style.setProperty("--body_brightness", 113 + "%");
+    document.getElementById("hat_sprite").style.setProperty("--hat_hue", 356 + "deg");
+    document.getElementById("hat_sprite").style.setProperty("--hat_saturation",71 + "%");
+    document.getElementById("hat_sprite").style.setProperty("--hat_brightness", 90 + "%");
+    document.getElementById("hair_sprite").style.setProperty("--hair_hue", 61 + "deg");
+    document.getElementById("hair_sprite").style.setProperty("--hair_saturation", 103 + "%");
+    document.getElementById("hair_sprite").style.setProperty("--hair_brightness", 108 + "%");
+    document.getElementById("bangs_sprite").style.setProperty("--bangs_hue", 61 + "deg");
+    document.getElementById("bangs_sprite").style.setProperty("--bangs_saturation", 103 + "%");
+    document.getElementById("bangs_sprite").style.setProperty("--bangs_brightness", 108 + "%");
+    document.getElementById("eyes_sprite").style.setProperty("--eyes_hue", 154 + "deg");
+    document.getElementById("eyes_sprite").style.setProperty("--eyes_saturation", 132 + "%");
+    document.getElementById("eyes_sprite").style.setProperty("--eyes_brightness", 131 + "%");
+    document.getElementById("mouth_sprite").style.setProperty("--mouth_hue", 0 + "deg");
+    document.getElementById("mouth_sprite").style.setProperty("--mouth_saturation", 75 + "%");
+    document.getElementById("mouth_sprite").style.setProperty("--mouth_brightness", 100 + "%");
+    document.getElementById("clothes_sprite").style.setProperty("--clothes_hue", 286 + "deg");
+    document.getElementById("clothes_sprite").style.setProperty("--clothes_saturation", 0 + "%");
+    document.getElementById("clothes_sprite").style.setProperty("--clothes_brightness", 100 + "%");
+    document.getElementById("face_acc_sprite").style.setProperty("--faceAcc_hue", 0 + "deg");
+    document.getElementById("face_acc_sprite").style.setProperty("--faceAcc_saturation", 0 + "%");
+    document.getElementById("face_acc_sprite").style.setProperty("--faceAcc_brightness", 100 + "%");
+    document.getElementById("face_hair_sprite").style.setProperty("--faceHair_hue", 61 + "deg");
+    document.getElementById("face_hair_sprite").style.setProperty("--faceHair_saturation", 103 + "%");
+    document.getElementById("face_hair_sprite").style.setProperty("--faceHair_brightness", 108 + "%");
+}
+
+function sliderReset(){
+    switch(Number(menu.getAttribute("value"))){
+        case 0:
+            hue.value = 39;
+            saturation.value = 80;
+            brightness.value = 113;
+        break;
+        case 1:
+            hue.value = 356;
+            saturation.value = 71;
+            brightness.value = 90;
+        break;
+        case 2:
+            hue.value = 61;
+            saturation.value = 103;
+            brightness = 108;
+        break;
+        case 3:
+            hue.value = 61;
+            saturation.value = 103;
+            brightness = 108;
+        break;
+        case 4:
+            hue.value = 154;
+            saturation.value = 132;
+            brightness = 131;
+        break;
+        case 5:
+            hue.value = 0;
+            saturation.value = 75;
+            brightness = 100;
+        break;
+        case 6:
+            hue.value = 286;
+            saturation.value = 0;
+            brightness = 100;
+        break;
+        case 7:
+            hue.value = 0;
+            saturation.value = 0;
+            brightness = 100;
+        break;
+        case 8:
+            hue.value = 61;
+            saturation.value = 103;
+            brightness = 108;
     }
 }
 
