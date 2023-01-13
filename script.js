@@ -925,31 +925,3 @@ function sliderReset(){
             brightness = 108;
     }
 }
-
-//Script not made by myself, used to make a downloadable image out of what is contained in the div with the canvas ID,
-//there is an issue with filters not being taken in account so the function might be removed in the future.
-
-function downloadURI(uri, name) {
-    var link = document.createElement("a");
-    link.download = name;
-    link.href = uri;
-    link.click();
-    //after creating link you should delete dynamic link
-    //clearDynamicLink(link); 
-}
-    
-function printToFile(div) {
-    console.log(div);
-    html2canvas(div).then(canvas => {
-        console.log("rendered");
-        var myImage = canvas.toDataURL("image/png");
-        //create your own dialog with warning before saving file
-        //beforeDownloadReadMessage();
-        //Then download file
-        downloadURI("data:" + myImage, "yourImage.png");
-    })
-};
-    
-document.querySelector("#upload").addEventListener("click", function(){
-    printToFile(document.querySelector("#canvas"));
-});
