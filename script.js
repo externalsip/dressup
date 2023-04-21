@@ -925,3 +925,4 @@ function sliderReset(){
             brightness = 108;
     }
 }
+//Work in progress
